@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="3Dunitychan" size="419.000000 362.135712" />
+    <ImageTarget name="SDunitychan" size="419.000000 362.135712" />
+  </Tracking>
+</QCARConfig>
