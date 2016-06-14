@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class SceneLoad : MonoBehaviour {
 
     void Update()
     {
-        if (Application.platform == RuntimePlatform.Android && Input.GetKey(KeyCode.Escape))
+        if (Input.GetKey(KeyCode.Escape))
+        //if (Application.platform == RuntimePlatform.Android && Input.GetKey(KeyCode.Escape))
         {
             Application.LoadLevel("Menu");
 

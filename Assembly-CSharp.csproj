@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\05Script\EXIT.cs" />
+     <Compile Include="Assets\05Script\QUIT.cs" />
      <Compile Include="Assets\05Script\SceneLoad.cs" />
      <Compile Include="Assets\UnityChan\Scripts\AutoBlink.cs" />
      <Compile Include="Assets\UnityChan\Scripts\AutoBlinkforSD.cs" />
@@ -135,7 +136,7 @@
  <HintPath>G:/Program Files/Unity5.2.4/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
  <Reference Include="Vuforia.UnityExtensions">
- <HintPath>D:/4_Unity/ARunitychan/Assets/Vuforia/Scripts/Internal/Vuforia.UnityExtensions.dll</HintPath>
+ <HintPath>C:/Users/Madoka/Documents/ARunitychan/Assets/Vuforia/Scripts/Internal/Vuforia.UnityExtensions.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Cecil">
  <HintPath>G:/Program Files/Unity5.2.4/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>

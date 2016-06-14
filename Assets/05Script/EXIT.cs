@@ -1,22 +1,40 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EXIT : MonoBehaviour {
+public class EXIT : MonoBehaviour
+{
 
-	void Start () {
+    private GameObject ExitPanel;
+    bool One = false;
 
-	}
+    void Start()
+    {
+        ExitPanel = GameObject.Find("ExitWindow");
+        ExitPanel.GetComponent<Canvas>().enabled = false;
+    }
 
     void Update()
     {
-        if(Input.GetKey(KeyCode.Escape))
+        if (Input.GetKey(KeyCode.Escape))
         //if (Application.platform == RuntimePlatform.Android && Input.GetKeyDown(KeyCode.Escape))
         {
-           GameObject Oya_Object = GameObject.Find("Canvas");
-           GameObject exitScene = Oya_Object.transform.FindChild("Exit").gameObject; 
-           exitScene.SetActive(true);
+            if (One == false)
+            {
+                //GameObject Oya_Object = GameObject.Find("Front");
+                //GameObject exitPanel = Oya_Object.transform.FindChild("Exit").gameObject;
+                //exitPanel.SetActive(true);
+
+                ExitPanel.GetComponent<Canvas>().enabled = true;
+
+                One = true;
+            }
         }
     }
+
+    /*public void OpenPanel()
+    {
+        ExitPanel.GetComponent<Canvas>().enabled = true;
+    }*/
 
     public void YES()
     {
@@ -26,6 +44,7 @@ public class EXIT : MonoBehaviour {
 
     public void NO()
     {
-        GameObject.Find("Exit").SetActive(false);
+        ExitPanel.GetComponent<Canvas>().enabled = false;
     }
+
 }
