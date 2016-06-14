@@ -4,30 +4,28 @@ using System.Collections;
 public class EXIT : MonoBehaviour {
 
 	void Start () {
-        GameObject.Find("Exit").SetActive(false);
-            	
+
 	}
 
     void Update()
     {
-        if (Application.platform == RuntimePlatform.Android && Input.GetKey(KeyCode.Escape))
+        if(Input.GetKey(KeyCode.Escape))
+        //if (Application.platform == RuntimePlatform.Android && Input.GetKeyDown(KeyCode.Escape))
         {
-            GameObject.Find("Exit").SetActive(true);
-            return;
-
+           GameObject Oya_Object = GameObject.Find("Canvas");
+           GameObject exitScene = Oya_Object.transform.FindChild("Exit").gameObject; 
+           exitScene.SetActive(true);
         }
-
     }
 
     public void YES()
     {
         Application.Quit();
+        return;
     }
 
     public void NO()
     {
         GameObject.Find("Exit").SetActive(false);
-        return;
     }
-		
 }
