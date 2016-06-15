@@ -15,7 +15,7 @@ public class EXIT : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         //if (Application.platform == RuntimePlatform.Android && Input.GetKeyDown(KeyCode.Escape))
         {
             if (One == false)
@@ -24,17 +24,17 @@ public class EXIT : MonoBehaviour
                 //GameObject exitPanel = Oya_Object.transform.FindChild("Exit").gameObject;
                 //exitPanel.SetActive(true);
 
-                ExitPanel.GetComponent<Canvas>().enabled = true;
-
+                //ExitPanel.GetComponent<Canvas>().enabled = true;
+                OpenPanel();
                 One = true;
             }
         }
     }
 
-    /*public void OpenPanel()
+    void OpenPanel()
     {
         ExitPanel.GetComponent<Canvas>().enabled = true;
-    }*/
+    }
 
     public void YES()
     {
@@ -45,6 +45,7 @@ public class EXIT : MonoBehaviour
     public void NO()
     {
         ExitPanel.GetComponent<Canvas>().enabled = false;
+        One = false;
     }
 
 }
