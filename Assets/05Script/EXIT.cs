@@ -5,47 +5,29 @@ public class EXIT : MonoBehaviour
 {
 
     private GameObject ExitPanel;
-    bool One = false;
+    //bool One = false;
 
-    void Start()
-    {
+    //void Start()
+    void Awake(){
+
         ExitPanel = GameObject.Find("ExitWindow");
-        ExitPanel.GetComponent<Canvas>().enabled = false;
+//        ExitPanel.GetComponent<Canvas>().enabled = false;
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        //if (Application.platform == RuntimePlatform.Android && Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (One == false)
-            {
-                //GameObject Oya_Object = GameObject.Find("Front");
-                //GameObject exitPanel = Oya_Object.transform.FindChild("Exit").gameObject;
-                //exitPanel.SetActive(true);
+    void Update(){
 
-                //ExitPanel.GetComponent<Canvas>().enabled = true;
-                OpenPanel();
+        //if (Application.platform == RuntimePlatform.Android && Input.GetKeyDown(KeyCode.Escape))
+        //if (Input.GetKeyDown(KeyCode.Escape)){
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+
+                ExitPanel.GetComponent<Canvas>().enabled = true;
+
+            /*if (One == false)
+            {
+                ExitPanel.GetComponent<Canvas>().enabled = true;
                 One = true;
-            }
+            }*/
         }
     }
-
-    void OpenPanel()
-    {
-        ExitPanel.GetComponent<Canvas>().enabled = true;
-    }
-
-    public void YES()
-    {
-        Application.Quit();
-        return;
-    }
-
-    public void NO()
-    {
-        ExitPanel.GetComponent<Canvas>().enabled = false;
-        One = false;
-    }
-
 }
