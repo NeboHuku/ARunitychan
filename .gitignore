@@ -42,3 +42,8 @@ captures/
 # ビジュアルスタジオの物全般
 */.csproj
 */.sln
+
+#file
+Library/
+obj/
+temp/

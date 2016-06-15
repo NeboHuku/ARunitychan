@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ButtonX : MonoBehaviour {
+public class BUTTON : MonoBehaviour {
 
     private GameObject ExitPanel;
 
